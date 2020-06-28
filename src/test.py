@@ -1,20 +1,18 @@
 import random
 
 
-
-
-  def random_no_seed():
+def random_no_seed():
        random_num = random.uniform(1, 20)
        return random_num
 
 
-  def random_with_seed(seed):
+def random_with_seed(seed):
        random.seed(6)
        random_num = random.uniform(1.1,20.5)
        return random_num
 
 
-  def list_generator(seed):
+def list_generator(seed):
 
       random_list = []
       list_seed = seed
@@ -28,7 +26,7 @@ import random
 
 
   #attach CSV reader?
-  def random_item():
+def random_item():
       # used above function for testing
       test_list = list_generator(12)
 
@@ -36,7 +34,7 @@ import random
       return choice
 
 
-  def random_seed_choice():
+def random_seed_choice():
       # used above function for testing
       test_list = list_generator(12)
 
@@ -46,7 +44,7 @@ import random
 
 
   #for seed and not seed
-  def n_items_no_seed(choices, seed = None):
+def n_items_no_seed(choices, seed = None):
 
       if seed is not None:
           random.seed(seed)
