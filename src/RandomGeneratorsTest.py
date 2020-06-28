@@ -9,10 +9,7 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(test_list)
 
 
-    def test_something(self):
-        test_list = RandomGenerators.list_generator(1)
 
-        self.assertFalse(test_list)
 
 
 if __name__ == '__main__':
