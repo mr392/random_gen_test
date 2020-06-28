@@ -53,11 +53,6 @@ class RanGen:
       if seed is not None:
           random.seed(seed)
 
-
-
-
-
-
       number_of_choices = choices
 
       test_list = RanGen.list_generator(seed)
