@@ -60,7 +60,7 @@ def n_items_no_seed(choices, seed = None):
 
 
 # change to what func you want to test
-msg = n_items_no_seed(10, 100)
+msg = list_generator(6)
 
 print(msg)
 
