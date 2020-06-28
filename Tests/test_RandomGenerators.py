@@ -1,10 +1,10 @@
 import unittest
-import RandomGenerators
+import RandomGenerators.RandomGenerators
 
 class MyTestCase(unittest.TestCase):
     def test_something(self):
         """List evaluates to False if empty"""
-        test_list = RandomGenerators.list_generator(1)
+        test_list = RandomGenerators.RandomGenerators.list_generator(2)
 
         self.assertTrue(test_list)
 
