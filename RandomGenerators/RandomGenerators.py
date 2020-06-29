@@ -17,26 +17,33 @@ def random_seed(seed = None, decimal = 1, start = 0, stop = 100, step = 1):
     return random_num
 
 
-def list_generator(seed):
-
+def list_generator(seed, decimal = 1, start = 0, stop = 100):
+# can be used with or without a seed, start and stop can be overridden
       random_list = []
       list_seed = seed
       random.seed(list_seed)
 
 
-      for i in range(0, 100):
+      for i in range(start, stop):
+        if decimal == 1:
           random_num = random.uniform(0, 100)
-          random_list.append(random_num)
+        else:
+            random_num = random.randrange(start,stop, 1)
+        random_list.append(random_num)
+     #For testing
+     # print(len(random_list))
       return random_list
 
 
   #attach CSV reader?
 def random_item():
-      # used above function for testing
-      test_list = list_generator(12)
 
-      choice = random.choice(test_list)
-      return choice
+
+      # used above function for testing
+     test_list = list_generator(12)
+
+     choice = random.choice(test_list)
+     return choice
 
 
 def random_seed_choice():
@@ -65,9 +72,10 @@ def n_items_no_seed(choices, seed = None):
 
 
 # change to what func you want to test
-msg = random_with_seed(2)
-
+msg = random_item()
 print(msg)
+
+
 
 
 
