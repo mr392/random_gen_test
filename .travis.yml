@@ -10,6 +10,4 @@ script:
 branches:
   only:
     - master
-    - development
-    - folder_test
     - refactor
