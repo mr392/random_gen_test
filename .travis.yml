@@ -12,3 +12,4 @@ branches:
     - master
     - development
     - folder_test
+    - refactor
