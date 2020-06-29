@@ -8,7 +8,10 @@ class MyTestCase(unittest.TestCase):
 
         self.assertTrue(test_list)
 
-
+    def test_random_item(self):
+        #test default list count
+        test_list = RandomGenerators.RandomGenerators.list_generator(2)
+        self.assertEqual(len(test_list), 100)
 
 
 
