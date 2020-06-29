@@ -1,15 +1,20 @@
 import random
 
 
-def random_no_seed():
-       random_num = random.uniform(1, 20)
-       return random_num
+def random_seed(seed = None, decimal = 1, start = 0, stop = 100, step = 1):
+
+    #can be used with or with out a seed, decimal = 1 will generate decimals
+
+    if seed is not None:
+        random.seed(seed)
+
+    if decimal == 1:
+        random_num = random.uniform(start, stop)
+    else:
+        random_num = random.randrange(start, stop, step)
 
 
-def random_with_seed(seed):
-       random.seed(6)
-       random_num = random.uniform(1.1,20.5)
-       return random_num
+    return random_num
 
 
 def list_generator(seed):
@@ -60,7 +65,7 @@ def n_items_no_seed(choices, seed = None):
 
 
 # change to what func you want to test
-msg = list_generator(6)
+msg = random_with_seed(2)
 
 print(msg)
 
